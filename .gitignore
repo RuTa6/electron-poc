@@ -1,0 +1,5 @@
+*node_modules/
+*electronpoc-linux-x64/
+*electronpoc-win32-x64/
+.electronpoc-linux-x64.zip
+.electronpoc-win32-x64.zip

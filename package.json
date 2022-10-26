@@ -1,0 +1,58 @@
+{
+  "name": "electronpoc",
+  "version": "1.0.0",
+  "description": "A quick description of your project",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "Electron POC",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.68",
+    "@electron-forge/maker-deb": "^6.0.0-beta.68",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.68",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.68",
+    "@electron-forge/maker-zip": "^6.0.0-beta.68",
+    "electron": "^21.2.0",
+    "electron-packager": "^17.0.0",
+    "electron-winstaller": "^5.1.0"
+  },
+  "dependencies": {
+    "@electron/remote": "^2.0.8",
+    "chokidar": "^1.5.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-windows-installer": "^1.7.8",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "electronpoc"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  }
+}

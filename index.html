@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Electron POC</title>
+  </head>
+  <body>
+    <br />
+    <button type="button" id="start">Select folder to watch</button>
+    <button type="button" id="stop" style="display: none">Stop watching</button>
+    <br />
+    <button type="button" onclick="resetLog();">Reset log</button>
+    <span id="messageLogger"></span>
+    <ul id="log-container"></ul>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
